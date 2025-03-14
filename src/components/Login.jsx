@@ -16,6 +16,9 @@ const [password,setPassword] = useState("Vikram2@123");
 
 const dispatch = useDispatch();
 
+const[error,setError]=useState("");
+
+
 const handleLogin = async ()=>{
 try{
 
@@ -35,8 +38,9 @@ try{
 
 
 catch(err){
-
-     console.log("error occured" +  err.message);
+  // console.log(err);
+setError(err.response.data);
+    //  console.log("error occured" +  err.message);
 
 }
 
@@ -71,9 +75,9 @@ catch(err){
   <input type="password" value={password} placeholder="Password" className="input input-bordered w-full max-w-xs" onChange={(e)=>setPassword(e.target.value)} />
   <div className="label">
   </div>
-
 </label>
 
+<p className='text-red-500'>{error}</p>
     <div className="card-actions justify-center py-3">
       <button className="btn btn-primary " onClick={handleLogin}>Login</button>
     </div>
