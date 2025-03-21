@@ -13,11 +13,15 @@ const Body = () => {
 
   // when refrehed user is automitacally loggedout 
   // fetch user profile in body before loading to the components
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const userData= useSelector((store)=>store.user);
+
+
 const fetchUser = async () => {
   try {
+    
     const res = await axios.get(BASE_URL + "/profile/view", { withCredentials: true });
     dispatch(addUser(res.data));
   } catch (err) {

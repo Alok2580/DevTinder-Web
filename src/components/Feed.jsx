@@ -4,14 +4,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import BASE_URL from '../utils/constants';
 // import { useNavigate } from 'react-router-dom';
 import { addFeed } from '../utils/feedSlice';
-import UserCard from './UserCard';
+import UserCard from './userCard';
 
 
 
 const Feed = () => {
 
 const feed= useSelector((store)=>store.feed);
+
 const dispatch = useDispatch();
+
 // const navigate = useNavigate();
 
 const getFeed = async()=>{
@@ -25,15 +27,24 @@ const res= await axios.get(BASE_URL+"/feed",{withCredentials:true});
 // console.log("res",res);
 
 
-dispatch(addFeed(res?.data));
+dispatch(addFeed(res?.data?.data));
+
+// console.log(res.data.data);
+// console.log("printing in feed",res?.data.data);
+// console.log("checking in feed");
+
 
 }
+
+
 
 catch(err){
+
 console.log("ERROR"+ err.message);
-}
 
 }
+
+  }
 
 useEffect(()=>{
   getFeed();
@@ -45,14 +56,15 @@ useEffect(()=>{
 
   return feed && (
 
+    // console.log("hello in feed return")
+  
     <div className='flex justify-center '>
     
-     < UserCard user={feed[feed.length-5]} />
+     < UserCard user={feed[0]} />
 
     </div>
-
-  )
-
+     
+    )
 
 }
 
