@@ -11,8 +11,8 @@ import BASE_URL from "../utils/constants.js"
 const Login = ()=>{
     
   const navigate = useNavigate();
-const [emailId, setEmailId]= useState("Vikram2@gmail.com");
-const [password,setPassword] = useState("Vikram2@123");
+const [emailId, setEmailId]= useState("ram@gmail.com");
+const [password,setPassword] = useState("ram@123");
 
 const dispatch = useDispatch();
 
@@ -27,17 +27,22 @@ try{
     },{withCredentials:true})
 
     if(res) {
+
         console.log("user loggedin successfully");
+
+        
     }
- 
+
 
     navigate('/feed');
 
     dispatch(addUser(res.data));
+
 }
 
 
 catch(err){
+
   // console.log(err);
 setError(err.response.data);
     //  console.log("error occured" +  err.message);
@@ -46,8 +51,11 @@ setError(err.response.data);
 
 }
 
+
     return (
+
         <>
+
         <div className='flex justify-center py-10'>
   <div className="card bg-base-200 w-96 shadow-xl">
   <div className="card-body">
@@ -83,11 +91,14 @@ setError(err.response.data);
     </div>
 
   </div>
+
 </div>
 </div>
 
     </>
     )
+
 }
 
 export default Login;
+

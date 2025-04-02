@@ -4,12 +4,13 @@ const UserCard = ({user}) => {
 
 // console.log("user",user);
 
-console.log(user);
-  const {firstName, lastName, photoId,bio,gender,age}= user;
+// console.log(user);
+  const {firstName, lastName, photoId ,about,gender,age}= user;
   // console.log(firstName);
 
   // console.log(user.lastName);
 
+  // console.log(user);
 
 
   return (
@@ -34,7 +35,8 @@ console.log(user);
           </h2>
 
           { age && gender && (<p>{age} {gender}</p>)}
-          <p>{bio}</p>
+          
+          <p>{about}</p>
           <div className="card-actions justify-end">
           <button className="btn btn-primary">ignore</button>
             <button className="btn btn-secondary">Interested</button>
