@@ -24,7 +24,7 @@ export default function App() {
 
  <Route path = "/login" element={<Login />} />
 <Route path ="/profile" element = {<Profile/>}/>
-<Route path = "/feed" element= {<Feed/>}/>
+<Route path = "/" element= {<Feed/>}/>
 <Route path = "/connections" element={<Connections/>}/>
 <Route path = "/requests" element={<Requests/>}/>
 

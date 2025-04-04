@@ -7,6 +7,7 @@ import requestReducer from "./requestSlice"
 const appStore = configureStore({
 
 reducer : {
+
     user:userReducer,
     feed:feedReducer,
     connections:connectionReducer,

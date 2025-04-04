@@ -46,7 +46,12 @@ useEffect(()=>{
 
 // console.log("feed",feed);
 // userCard(user);
-
+if(!feed) return ;
+if(feed.length==0){
+  return (
+    <h2 className='text-center py-10 font-bold text-2xl'>you have reached end of the feed</h2>
+  )
+}
 
   return feed && (
 
