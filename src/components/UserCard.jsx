@@ -18,17 +18,21 @@ const UserCard = ({user}) => {
   // console.log(user.lastName);
 
   // console.log(user);
-const dispatch = useDispatch();
 
+
+const dispatch = useDispatch();
 
   const handleChoice = async (status, _id)=>{
     // console.log(_id);
     try{
+
     await axios.post(BASE_URL+"/request"+"/"+status+"/"+_id,{},{withCredentials:true});
 
     dispatch(removeFeed(_id));
+
     }
     catch(err){
+      
 
       console.log("ERROR "+ err.message);
 
