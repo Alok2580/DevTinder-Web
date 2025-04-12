@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
-import BASE_URL from '../utils/constants';
+import {BASE_URL} from '../utils/constants';
 import { addRequest, removeRequest } from '../utils/requestSlice';
 
 

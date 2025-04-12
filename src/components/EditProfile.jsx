@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import {useState } from 'react';
 import UserCard from './UserCard';
 import axios from 'axios';
-import BASE_URL from '../utils/constants';
+import {BASE_URL} from '../utils/constants';
 import {addUser} from '../utils/userSlice'
 
 const EditProfile = ({user}) => {

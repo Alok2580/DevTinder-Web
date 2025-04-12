@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import {removeUser} from '../utils/userSlice.js';
 import axios from 'axios';
 
-import BASE_URL from '../utils/constants.js';
+import {BASE_URL} from '../utils/constants.js';
 const NavBar = () => {
 
 
@@ -70,7 +70,7 @@ const NavBar = () => {
           </ul>
 
         </div>)
-        
+
   
       }
 

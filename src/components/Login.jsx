@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 // import { Navigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import BASE_URL from "../utils/constants.js"
+import {BASE_URL} from "../utils/constants.js"
 import NavBar from './NavBar.jsx';
 
 

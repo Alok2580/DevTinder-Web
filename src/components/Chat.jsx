@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 
 import { useParams } from 'react-router-dom'
-import BASE_URL from '../utils/constants';
+import {BASE_URL} from '../utils/constants';
 import { configureStore } from '@reduxjs/toolkit';
 import { createSocketConnection } from '../utils/socket';
 import axios from 'axios';
@@ -46,7 +46,7 @@ const Chat = () => {
 
     useEffect(()=>{
 
-      
+
 if(!userId) return;
 
 
